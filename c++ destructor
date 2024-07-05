@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+class mycar{
+    private:
+    std::string make;
+    std::string model;
+    int year;
+    
+    public:
+    mycar(std::string cmake, std::string cmodel, int cyear){
+        make=cmake;
+        model=cmodel;
+        year=cyear;
+    }
+    
+    ~mycar(){
+        std::cout << "Car destroyed: " << make << " " << model << " " << year << std::endl;
+    }
+    
+    void carInfo(){
+         std::cout << "Car make:"<<make<<"car model:"<<model<<"car year"<<year<<std::endl;
+    }
+};
+
+
+int main()
+{
+    mycar polo("Volkswagen", "Polo Highline+",2019);
+    polo.carInfo();
+    return 0;
+}
